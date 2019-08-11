@@ -1,0 +1,57 @@
+<div class="container-fluid">
+        <div style="padding-bottom:20px">
+            <div class="col-md-12">
+                <!--Accordian : start-->
+                <div class="accordian" id="aboutUS">
+                    <!--Detailed User Info Team : start-->
+                    <div class="founding_team_card card">
+                        <div class="card-header" id="foundingTeam">
+                            <h5 class="mb-0 cursor-pointer about_us_title">
+                                User Details
+                            </h5>
+                        </div>
+                        <div id="btnFoundingTeamDetails" class="collapse show" aria-labelledby="foundingTeam" data-parent="#aboutUS">
+                            <div class="card-body" *ngIf="detailedData">
+                                <!--Deshpande, Rohit : start-->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="{{detailedData.avatar_url}}" alt="" style="contain: inherit; height: 250px">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <p class="profileName">{{detailedData.name | titlecase}}</p>
+                                                <p class="justify-text">{{detailedData.email ? detailedData.email : ''}}</p>
+                                                <p class="profileDesignation">{{detailedData.company | titlecase}}</p>
+                                                <p class="justify-text">{{detailedData.bio ? detailedData.bio : ''}}</p>
+                                                <p class="justify-text">{{detailedData.location ? detailedData.location : '' }}</p>
+                                                <div class="row text-left">
+                                                    <div class="col-md-12">
+                                                        <!-- <button class="btn btn-primary show-more" [hidden]="!show_rohit_info" (click)="toggle_rohit_info('true')"><strong>Blogs</strong></button> -->
+                                                        <mat-chip-list aria-label="Fish selection">
+                                                                <mat-chip color="primary" (click)="showRepos()" selected>{{detailedData.public_repos + ' Repos'}}</mat-chip>
+                                                                <mat-chip color="accent" selected>{{detailedData.public_gists + ' Gists'}}</mat-chip>
+                                                                <mat-chip color="primary" (click)="showFollowers(detailedData.login)" selected>{{detailedData.followers + ' Followers'}}</mat-chip>
+                                                                <mat-chip color="accent" selected>{{detailedData.following  + ' Followings'}}</mat-chip>
+                                                              </mat-chip-list>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="back-button" style="float: right">
+                                        <button class="btn btn-primary" (click)="goBack()">Back</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Accordian Founding Team: end-->
+                </div>
+                <!--Accordian : end-->
+            </div>
+        </div>
+    </div>
+    

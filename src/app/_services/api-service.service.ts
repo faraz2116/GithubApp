@@ -1,14 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http'
+import { startWith } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiServiceService {
 
-  private _baseUrl = 'https://api.github.com/users';
+  // For Storing the request response
+  public responseCache = new Map();
 
-  constructor(private http: HttpClient) { }
+  private _baseUrl = 'https://api.github.com/';
+  private _api: any;
+
+  constructor(private http: HttpClient) { 
+    this._api = {
+      ALLUSERS : this._baseUrl + 'users',
+      SEARCHUSER: this._baseUrl + 'search/users',
+      USERDETAIL: this._baseUrl + 'users',
+      FOLLOWERS: this._baseUrl + 'users'
+    }
+  }
 
   // Common Method to call API
   execute(request: string, url: string, data: any) {
@@ -20,7 +33,16 @@ export class ApiServiceService {
     };
     // this.http.post() or this.http.get()
     if (request == 'get') {
-        return this.http.get<any>(url, httpOptions);
+      let response = this.http.get<any>(url, httpOptions);
+      // storing the reponse in localstorage for caching
+      response.subscribe(beers => {
+        localStorage[url] = JSON.stringify(beers)
+      });
+      // fetching response from local storage if key Found stored response
+      response = response.pipe(
+        startWith(JSON.parse(localStorage[url] || '[]'))
+      )
+      return response;
     } else {
         return this.http.post<any>(url, data, httpOptions);
     }
@@ -36,7 +58,25 @@ export class ApiServiceService {
       return this.execute('get', url, null);
   }
 
+  // get All Users
   getGitHubUserData(){
-    return this.get(this._baseUrl)
+    const url = this._api.ALLUSERS;
+    return this.get(url)
+  }
+
+  // search the user by name
+  getGithubUserByName(name: string){
+    const url = this._api.SEARCHUSER + '?q=' + name;
+    return this.get(url)
+  }
+
+  getUserDetailsByName(name: string){
+    const url = this._api.USERDETAIL + '/' + name;
+    return this.get(url)
+  }
+
+  getFollowersByName(name : string){
+    const url = this._api.FOLLOWERS + '/' + name + '/followers' ;
+    return this.get(url)
   }
 }

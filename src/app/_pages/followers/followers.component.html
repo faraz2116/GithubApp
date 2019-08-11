@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div style="padding-bottom:20px">
+        <div class="col-md-12">
+            <!--Accordian : start-->
+            <div class="accordian" id="aboutUS">
+                <!--Detailed User Info Team : start-->
+                <div class="founding_team_card card">
+                    <div class="card-header" id="foundingTeam">
+                        <h5 class="mb-0 cursor-pointer about_us_title">
+                            Followers
+                        </h5>
+                    </div>
+                    <div id="btnFoundingTeamDetails" class="collapse show" aria-labelledby="foundingTeam"
+                        data-parent="#aboutUS">
+                        <div class="card-body" *ngIf="followers">
+                            <!--Deshpande, Rohit : start-->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="content">
+                                            <div class="row" style="margin:20px">
+                                                <div class="col-2 followers" *ngFor="let follower of followers">
+                                                    <mat-card class="follower-card" style="margin: 10px">
+                                                        <!-- <mat-card-header>
+                                                            <mat-card-title>{{follower.login | titlecase}}</mat-card-title>
+                                                        </mat-card-header> -->
+                                                        <img class="follower-image" mat-card-image src="{{follower.avatar_url}}"
+                                                            alt="{{follower.login}}">
+                                                        <mat-card-actions>
+                                                                {{follower.login | titlecase}}
+                                                        </mat-card-actions>
+                                                    </mat-card>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="back-button" style="float: right">
+                                    <button class="btn btn-primary" (click)="goBack()">Back</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Accordian Founding Team: end-->
+            </div>
+            <!--Accordian : end-->
+        </div>
+    </div>
+</div>

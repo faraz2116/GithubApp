@@ -1,0 +1,60 @@
+.users{
+    padding: 0;
+    margin: 0;
+}
+.user-card {
+    max-width: 200px;
+    background: lavender;
+}
+
+.user-image{
+    height: 170px !important;
+}
+
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: lavender;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.search_input{
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    line-height: 40px;
+    width: 450px;
+    padding: 0 10px;
+    caret-color:white;
+
+}
+
+.searchbar:hover > .search_icon{
+    background: white;
+    border-color: white;
+    color: black;
+}
+
+.search_icon{
+    height: 40px;
+    width: 60px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30%;
+    border-color: white;
+    color:black;
+}
+
+/* form input:not(:focus).ng-dirty.ng-invalid, */
+form.user-submitted input.ng-invalid{
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: red;
+  border-radius: 30px;
+}

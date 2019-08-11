@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.body{
+    padding: 20px;
+    background-color: white !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #007C96 !important;
+    border-color: #007C96 !important;
+}
