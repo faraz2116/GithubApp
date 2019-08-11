@@ -7,7 +7,7 @@
                 <div class="founding_team_card card">
                     <div class="card-header" id="foundingTeam">
                         <h5 class="mb-0 cursor-pointer about_us_title">
-                            Followers
+                            {{ loginName+"'s" }} Followers
                         </h5>
                     </div>
                     <div id="btnFoundingTeamDetails" class="collapse show" aria-labelledby="foundingTeam"
@@ -27,7 +27,7 @@
                                                         <img class="follower-image" mat-card-image src="{{follower.avatar_url}}"
                                                             alt="{{follower.login}}">
                                                         <mat-card-actions>
-                                                                {{follower.login | titlecase}}
+                                                                <strong>{{follower.login | titlecase}}</strong>
                                                         </mat-card-actions>
                                                     </mat-card>
                                                 </div>
@@ -37,10 +37,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="back-button" style="float: right">
-                                    <button class="btn btn-primary" (click)="goBack()">Back</button>
+                                    <div class="col-12 back-button" style="text-align: inherit;margin-left: 13px;">
+                                        <button class="btn btn-primary" (click)="goBack()">Back</button>
+                                    </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>

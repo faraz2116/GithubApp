@@ -24,12 +24,6 @@ export class UserDetailsComponent implements OnInit, OnDestroy {
     private _router: Router,
     private _activatedRoute: ActivatedRoute) { }
 
-  // fetching UserInfo From the Service
-  // private userSubscription =  this._infoService.userData$.subscribe(userInfo => {
-  //   console.log(" User Info", userInfo)
-  //   this.userName = userInfo.login
-  // })
-
   private userSubscription = this._activatedRoute.queryParams.subscribe( params => {
     if(params['name']){
       this.userName = params['name'];

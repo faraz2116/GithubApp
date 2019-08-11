@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+    .about_us_title {
+        font-size: 1.7em;
+        margin: 12px 0px;
+    }
+}
+.about_us_title {
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    font-size: 40px;
+}
+.profileName {
+    text-align: justify;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #000000;
+}
+
+.profileDesignation{
+    text-align: justify;
+    font-weight: 600;
+}
+
+.show-more{
+    color: #000;
+    background-color: #fff;
+    border-color: #900;
+    padding: 4px;
+    font-size: small;
+    border-radius: 0px;
+}
+
+.show-more:focus,
+.show-more:hover {
+    background: #900 !important;
+    border-color: #900 !important;
+    color: #fff !important;
+    text-align: justify;
+}
+
+
+.img_position_founding_team {
+    width: 162px;
+    height: 162px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 55% 100%;
+}
+
+.founding_team_card,
+.founding_team_card .card{
+    margin: 12px;
+}

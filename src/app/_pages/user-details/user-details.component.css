@@ -1,12 +1,12 @@
 @media (max-width: 768px) {
-    .about_us_title {
+    .title {
         font-size: 1.7em;
         margin: 12px 0px;
     }
 }
-.about_us_title {
+.title {
     font-weight: 600;
-    color: #990000;
+    color: #000000;
     text-align: center;
     font-size: 40px;
 }
@@ -14,29 +14,12 @@
     text-align: justify;
     font-size: 1.6em;
     font-weight: 600;
-    color: #990000;
+    color: #000000;
 }
 
 .profileDesignation{
     text-align: justify;
     font-weight: 600;
-}
-
-.show-more{
-    color: #000;
-    background-color: #fff;
-    border-color: #900;
-    padding: 4px;
-    font-size: small;
-    border-radius: 0px;
-}
-
-.show-more:focus,
-.show-more:hover {
-    background: #900 !important;
-    border-color: #900 !important;
-    color: #fff !important;
-    text-align: justify;
 }
 
 
@@ -46,58 +29,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 55% 100%;
-}
-
-
-
-.img_rohit{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Rohit.jpg'); */
-    background-size: contain;
-}
-
-.img_Joseph{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Joseph.jpg'); */
-    background-size: contain;
-}
-
-.img_William{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/William.jpg'); */
-    background-size: contain;
-}
-
-.img_sid{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Siddharatha-B-Kukrety.jpg'); */
-background-size: contain;
-}
-
-.img_anubhav{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Anubhav-Mahajan.jpg'); */
-    background-size: contain;
-}
-
-.img_maramraju{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Sharathbabu-Maramraju.jpg'); */
-    background-size: contain;
-}
-
-.img_manoj{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Manoj-Nair2.jpg'); */
-    background-size: contain;
-}
-
-.img_Felix{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Felix.jpg'); */
-    background-size: contain;
-}
-
-.img_kally{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Kally-Sheth.jpg'); */
-    background-size: contain;
-}
-
-.img_carsten{
-    /* background-image: url('../../../../../assets/images/board_of_advisors/Carsten.jpg'); */
-    background-size: contain;
 }
 
 .founding_team_card,
