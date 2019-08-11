@@ -1,0 +1,65 @@
+@media (min-width: 952px){
+    .cx-fixedWidthPage {
+        margin: 0 auto;
+        padding-right: 0;
+        padding-left: 0;
+        width: 1170px;
+        width: var(--cx-fixedPageWidth);
+    }
+
+    .agentCards-block:nth-child(1n) {
+        margin-right: 24px;
+        margin-left: 0;
+    }
+}
+
+.cx-fixedWidthPage {
+    width: 100%;
+    padding-left: 24px;
+    padding-left: var(--gutter);
+    padding-right: 24px;
+    padding-right: var(--gutter);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.agentCards {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-top: 60px;
+}
+
+.agentCards-contact {
+    padding: 20px 0 20px 20px;
+    width: 100%;
+    min-height: 150px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.agentCards-name {
+    color: #303339;
+    font-size: 24px;
+    font-family: Compass Serif,Times,Times New Roman,serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.agentCards-email, .agentCards-phone {
+    font-family: Compass Sans,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.u-displayBlock {
+    display: block;
+}
+
+.agentCards-card {
+    margin: 0 auto 30px;
+    border: 1px solid #eaebf0;
+    max-width: 300px;
+    background-color: #fff;
+}
